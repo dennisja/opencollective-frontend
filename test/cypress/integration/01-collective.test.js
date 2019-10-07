@@ -28,7 +28,7 @@ describe('collective page', () => {
   });
 
   it('opens new expense page', () => {
-    cy.get('.desktopOnly button.submitExpense').click();
+    cy.contains('[data-cy="collectiveCTAs"] button', 'Submit Expense').click();
     cy.wait(500);
     cy.get('.ExpensesPage .CreateExpenseForm').contains('Sign up or login to submit an expense');
     cy.get('.ExpensesPage .desktopOnly .menu .item.budget').click();

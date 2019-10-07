@@ -2,7 +2,7 @@ const collectiveName = 'New collective';
 
 describe('create a collective', () => {
   it('edit info', () => {
-    cy.login({ email: 'testuser@opencollective.com', redirect: '/create' });
+    cy.signup({ redirect: '/create' });
     cy.get('.CollectiveCategoryPicker .category')
       .first()
       .click();

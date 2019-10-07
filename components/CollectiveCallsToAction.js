@@ -23,7 +23,14 @@ const CollectiveCallsToAction = ({
 }) => {
   const [hasAddFundsModal, showAddFundsModal] = React.useState(false);
   return (
-    <Container display="flex" justifyContent="center" alignItems="center" whiteSpace="nowrap" {...props}>
+    <Container
+      data-cy="collectiveCTAs"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      whiteSpace="nowrap"
+      {...props}
+    >
       {hasContact && (
         <a href={`mailto:hello@${collective.slug}.opencollective.com`}>
           <StyledButton mx={2} my={1} minWidth={buttonsMinWidth}>
